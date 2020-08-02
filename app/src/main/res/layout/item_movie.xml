@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.kotlin.training.viewmodel.MovieViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/padding_5_dp">
+<!--        <androidx.cardview.widget.CardView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_margin="@dimen/padding_20_dp"-->
+<!--            app:cardCornerRadius="@dimen/padding_10_dp"-->
+<!--            app:cardElevation="@dimen/padding_10_dp"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent"-->
+<!--            android:id="@+id/cardview">-->
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding_10_dp"
+            android:textColor="@color/themeColor"
+            android:textSize="@dimen/textSize_14_sp"
+            android:textStyle="bold"
+
+            android:lines="2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:mutableText="@{viewModel.getMovieTitle()}" />
+
+        <ImageView
+            android:id="@+id/poster"
+            android:layout_width="0dp"
+android:contentDescription="@string/movie_list"
+            android:layout_height="@dimen/width_200_dp"
+            android:layout_marginTop="@dimen/padding_5_dp"
+            android:scaleType="fitXY"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/voting"></ImageView>
+
+        <TextView
+            android:id="@+id/overview"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/padding_5_dp"
+            android:layout_marginTop="@dimen/padding_5_dp"
+            android:textSize="@dimen/textSize_12_sp"
+            android:textColor="@android:color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/poster"
+            app:layout_constraintTop_toBottomOf="@+id/voting"
+            app:mutableText="@{viewModel.getMovieOverview()}"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/voting"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding_5_dp"
+            android:textSize="@dimen/textSize_12_sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/title"
+            app:mutableText="@{viewModel.getVoting()}"
+            android:textColor="@android:color/black"/>
+<!--        </androidx.cardview.widget.CardView>-->
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

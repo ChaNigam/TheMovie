@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">KotlinTraining</string>
+    <string name="username">Enter Username</string>
+    <string name="password">Enter Password</string>
+    <string name="login">Login</string>
+    <string name="remember_me">Remember Me</string>
+    <string name="snack_password">Please enter a minimum 6 digit Password</string>
+    <string name="snack_username">Please enter Username</string>
+
+    <string name="network_error">No Internet Connection!</string>
+    <string name="movie_list">Popular Movies</string>
+
+    <string name="Home">Home</string>
+
+    <string name="success">Success</string>
+    <string name="running">Running</string>
+    <string name="empty">No Data Found. Please check your Internet!</string>
+    <string name="request">There is some issue in calling API request</string>
+
+    <string name="search">Search Movie</string>
+</resources>

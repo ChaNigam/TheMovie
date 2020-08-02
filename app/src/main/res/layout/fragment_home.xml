@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".view.ui.HomeFragment"
+        android:id="@+id/parentLayout">
+
+
+            <com.kotlin.training.view.uikit.UIButton
+                android:id="@+id/btn_fetch"
+                android:layout_width="@dimen/width_200_dp"
+                android:layout_height="@dimen/height_50_dp"
+                android:layout_margin="@dimen/padding_20_dp"
+                android:text="@string/movie_list"
+                android:textColor="@android:color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+
+                android:visibility="visible"></com.kotlin.training.view.uikit.UIButton>
+
+        <ImageView
+            android:id = "@+id/imvSpeak"
+            android:layout_width = "@dimen/height_50_dp"
+            android:layout_height = "@dimen/height_50_dp"
+            android:background = "?selectableItemBackground"
+            android:src = "@android:drawable/ic_btn_speak_now"
+            android:tint="@color/themeColor"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_fetch"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
